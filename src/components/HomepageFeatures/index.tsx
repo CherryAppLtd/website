@@ -11,45 +11,45 @@ type FeatureItem = {
 
 const FeatureList: FeatureItem[] = [
   {
-    title: 'Easy to Use',
+    title: 'Dynamic Island',
     // Svg: require('@site/static/img/undraw_docusaurus_mountain.svg').default,
     img: '/banner/dynamicisland.png',
     description: (
       <>
-        Docusaurus was designed from the ground up to be easily installed and
-        used to get your website up and running quickly.
+        Dynamic Island feature for Android, it's make the interaction for your
+        device.
       </>
     ),
   },
   {
-    title: 'Focus on What Matters',
+    title: 'QRScanner - Barcode Scanner',
     // Svg: require('@site/static/img/undraw_docusaurus_tree.svg').default,
     img: '/banner/qrscanner.png',
     description: (
       <>
-        Docusaurus lets you focus on your docs, and we&apos;ll do the chores. Go
-        ahead and move your docs into the <code>docs</code> directory.
+        Fast, accurate and easy to use QR code and barcode scanner, generator,
+        reader.
       </>
     ),
   },
   {
-    title: 'Powered by React',
+    title: 'YuMusic',
     // Svg: require('@site/static/img/undraw_docusaurus_react.svg').default,
     img: '/banner/yumusic.png',
     description: (
       <>
-        Extend or customize your website layout by reusing React. Docusaurus can
-        be extended while reusing the same header and footer.
+        A lightweight but useful music player for you. search songs from
+        youtube, play and download
       </>
     ),
   },
 ];
 
-function Feature({title, img, description}: FeatureItem) {
+function Feature({ title, img, description }: FeatureItem) {
   return (
     <div className={clsx('col col--4')}>
       <div className="text--center">
-        <img className={styles.featureSvg} role="img" src={img}/>
+        <img className={styles.featureSvg} role="img" src={img} />
       </div>
       <div className="text--center padding-horiz--md">
         <h3>{title}</h3>
