@@ -8,12 +8,12 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 const config = {
   title: 'CherryApp',
   tagline: 'Create better Apps',
-  url: 'https://github.com/',
+  url: 'https://cherry-app-site.web.app/',
   baseUrl: '/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
   favicon: 'img/favicon.ico',
-
+  titleDelimiter: '-',
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
   organizationName: 'CherryAppLtd', // Usually your GitHub org/user name.
@@ -43,21 +43,31 @@ const config = {
       /** @type {import('@docusaurus/preset-classic').Options} */
       ({
         docs: {
+          routeBasePath: '/'
           // sidebarPath: require.resolve('./sidebars.js'),
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
           // editUrl:
           //   'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
         },
-        blog: {
-          showReadingTime: true,
-          // Please change this to your repo.
-          // Remove this to remove the "edit this page" links.
-          // editUrl:
-          //   'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
-        },
+        blog: false,
+        // blog: {
+        //   showReadingTime: true,
+        //   // Please change this to your repo.
+        //   // Remove this to remove the "edit this page" links.
+        //   // editUrl:
+        //   //   'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
+        // },
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
+        },
+        // googleAnalytics: {
+        //   trackingID: 'UA-4290683538-1',
+        //   anonymizeIP: true,
+        // },
+        gtag: {
+          trackingID: 'G-SEW2PNB155',
+          anonymizeIP: true,
         },
       }),
     ],
@@ -66,13 +76,19 @@ const config = {
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
+      docs: {
+        sidebar: {
+          hideable: true,
+          autoCollapseCategories: true,
+        },
+      },
       navbar: {
         hideOnScroll: true,
         title: 'HOME',
-        logo: {
-          alt: 'CherryApp Logo',
-          src: 'img/logo.svg',
-        },
+        // logo: {
+        //   alt: 'CherryApp Logo',
+        //   src: 'img/logo.svg',
+        // },
         items: [
           // {
           //   type: 'doc',
@@ -93,7 +109,20 @@ const config = {
         style: 'dark',
         links: [
           {
-            title: 'App Store',
+            // title: 'App Store',
+            items: [
+              {
+                label: 'Terms of Service',
+                href: '/terms',
+              },
+              {
+                label: 'Privacy Policy',
+                href: '/privacy',
+              },
+            ],
+          },
+          {
+            // title: 'App Store',
             items: [
               {
                 label: 'Google Play',
@@ -106,7 +135,7 @@ const config = {
             ],
           },
           {
-            title: 'Community',
+            // title: 'Community',
             items: [
               // {
               //   label: 'Facebook',
@@ -140,7 +169,7 @@ const config = {
           //   ],
           // },
         ],
-        copyright: `Copyright © ${new Date().getFullYear()} CherryAppLtd.`,
+        copyright: `Copyright © ${new Date().getFullYear()} CherryApp, Ltd.`,
       },
       prism: {
         theme: lightCodeTheme,
