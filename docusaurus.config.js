@@ -24,7 +24,17 @@ const config = {
   // to replace "en" with "zh-Hans".
   i18n: {
     defaultLocale: 'en',
-    locales: ['en'],
+    // locales: ['en'],
+    locales: ['en', 'zh-Hans', 'fa'],
+    localeConfigs: {
+      en: {
+        htmlLang: 'en-GB',
+      },
+      // 如果你不需要覆盖默认值，你可以忽略这个语言（比如 zh-Hans）
+      fa: {
+        direction: 'rtl',
+      },
+    },
   },
 
   presets: [
@@ -33,18 +43,18 @@ const config = {
       /** @type {import('@docusaurus/preset-classic').Options} */
       ({
         docs: {
-          sidebarPath: require.resolve('./sidebars.js'),
+          // sidebarPath: require.resolve('./sidebars.js'),
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
-          editUrl:
-            'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
+          // editUrl:
+          //   'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
         },
         blog: {
           showReadingTime: true,
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
-          editUrl:
-            'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
+          // editUrl:
+          //   'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
         },
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
@@ -57,6 +67,7 @@ const config = {
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
       navbar: {
+        hideOnScroll: true,
         title: 'HOME',
         logo: {
           alt: 'CherryApp Logo',
@@ -69,8 +80,8 @@ const config = {
           //   position: 'right',
           //   label: 'APPS',
           // },
-          {to: '#apps', label: 'APPS', position: 'right'},
-          {to: '#apps', label: 'ABOUT US', position: 'right'},
+          { to: '#apps', label: 'APPS', position: 'right' },
+          { to: '#apps', label: 'ABOUT US', position: 'right' },
           // {
           //   href: 'https://github.com/facebook/docusaurus',
           //   label: 'GitHub',
@@ -135,6 +146,12 @@ const config = {
         theme: lightCodeTheme,
         darkTheme: darkCodeTheme,
       },
+      metadata: [
+        {
+          name: 'keywords',
+          content: 'Dynamic Island, QRScanner - Barcode Scanner, YuMusic',
+        },
+      ],
     }),
 };
 

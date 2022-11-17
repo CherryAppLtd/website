@@ -29,26 +29,30 @@ function HomepageHeader() {
 
 function Secetion() {
   return (
-    <header id="apps" className={clsx('hero hero--primary', styles.heroBanner)}>
+    <section
+      id="apps"
+      // className={styles.features}
+      className={clsx('hero hero--primary', styles.heroBanner)}
+    >
       <div className="container">
         <a href="https://play.google.com/store/apps/details?id=dynamic.island.dynamicspot.dynamicisland.app">
           <img src="logo/dynamicisland.png" />
-          <span>Dynamic Island</span>
+          <p>Dynamic Island</p>
         </a>
       </div>
       <div className="container">
         <a href="https://play.google.com/store/apps/details?id=com.cherry.qrscanner666">
           <img src="logo/qrscanner.png" />
-          <span>QRScanner - Barcode Scanner</span>
+          <p>QRScanner</p>
         </a>
       </div>
       <div className="container">
         <a href="https://play.google.com/store/apps/details?id=youtube.player.music.musica.tvmusic.free.download.yumusic">
           <img src="logo/yumusic.png" />
-          <span>YuMusic</span>
+          <p>YuMusic</p>
         </a>
       </div>
-    </header>
+    </section>
   );
 }
 
