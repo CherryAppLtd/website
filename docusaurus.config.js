@@ -146,10 +146,6 @@ const config = {
               //   href: 'https://discordapp.com/invite/docusaurus',
               // },
               {
-                label: 'Github',
-                href: 'https://github.com/CherryAppLtd',
-              },
-              {
                 label: 'Twitter',
                 href: 'https://twitter.com/CherryAppLtd',
               },
