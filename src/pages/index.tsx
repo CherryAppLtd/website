@@ -32,8 +32,13 @@ function Secetion() {
     <section
       id="apps"
       // className={styles.features}
-      className={clsx('hero hero--primary', styles.heroBanner)}
-    >
+      className={clsx('hero hero--primary', styles.heroBanner)}>
+      <div className="container">
+        <a href="https://play.google.com/store/apps/details?id=youtube.player.music.musica.tvmusic.free.download.yumusic">
+          <img src="logo/yumusic.png" />
+          <p>YuMusic</p>
+        </a>
+      </div>
       <div className="container">
         <a href="https://play.google.com/store/apps/details?id=dynamic.island.dynamicspot.dynamicisland.app">
           <img src="logo/dynamicisland.png" />
@@ -47,9 +52,9 @@ function Secetion() {
         </a>
       </div>
       <div className="container">
-        <a href="https://play.google.com/store/apps/details?id=youtube.player.music.musica.tvmusic.free.download.yumusic">
-          <img src="logo/yumusic.png" />
-          <p>YuMusic</p>
+        <a href="https://play.google.com/store/apps/details?id=full.hd.video.downloader.free.videodownload.app">
+          <img src="logo/videodownloader.png" />
+          <p>Video Downloader</p>
         </a>
       </div>
     </section>

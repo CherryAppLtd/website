@@ -11,6 +11,17 @@ type FeatureItem = {
 
 const FeatureList: FeatureItem[] = [
   {
+    title: 'YuMusic',
+    // Svg: require('@site/static/img/undraw_docusaurus_react.svg').default,
+    img: '/banner/yumusic.png',
+    description: (
+      <>
+        A lightweight but useful music player for you. search songs from
+        youtube, play and download
+      </>
+    ),
+  },
+  {
     title: 'Dynamic Island',
     // Svg: require('@site/static/img/undraw_docusaurus_mountain.svg').default,
     img: '/banner/dynamicisland.png',
@@ -31,18 +42,7 @@ const FeatureList: FeatureItem[] = [
         reader.
       </>
     ),
-  },
-  {
-    title: 'YuMusic',
-    // Svg: require('@site/static/img/undraw_docusaurus_react.svg').default,
-    img: '/banner/yumusic.png',
-    description: (
-      <>
-        A lightweight but useful music player for you. search songs from
-        youtube, play and download
-      </>
-    ),
-  },
+  }
 ];
 
 function Feature({ title, img, description }: FeatureItem) {
